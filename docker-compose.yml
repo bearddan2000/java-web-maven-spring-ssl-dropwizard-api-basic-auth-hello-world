@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  api:
+    build: api
+    healthcheck:
+      test: "exit 0"
+
+#  java-srv:
+#    build: java-srv
+#    healthcheck:
+#      test: "exit 0"
+#    ports:
+#      - 80:8080
+#    links:
+#      - "api:api"
+#    depends_on:
+#      - api

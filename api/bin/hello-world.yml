@@ -1,0 +1,22 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+    - type: https
+      port: 8443
+      keyStorePath: /usr/src/mymaven/src/main/java/example/keystore/baeldung.jks
+      keyStorePassword: password
+      trustStorePath: /usr/src/mymaven/src/main/java/example/keystore/baeldung.jks
+      trustStorePassword: password
+  adminConnectors:
+    - type: http
+      port: 8081
+    - type: https
+      port: 8444
+      keyStorePath: /usr/src/mymaven/src/main/java/example/keystore/baeldung.jks
+      keyStorePassword: password
+      trustStorePath: /usr/src/mymaven/src/main/java/example/keystore/baeldung.jks
+      trustStorePassword: password
+
+template: Hello, %s!
+defaultName: Stranger
